@@ -8,7 +8,7 @@ export CUDA_VERSION=cuda11
 export CUDF_VERSION=0.19.2
 export R4S_VERSION=0.5.0
 
-test -f Pipenv.lock || pipenv install
+test -f Pipfile.lock || pipenv install
 
 test -f cudf-${CUDF_VERSION}-${CUDA_VERSION}.jar || curl https://repo1.maven.org/maven2/ai/rapids/cudf/${CUDF_VERSION}/cudf-${CUDF_VERSION}-${CUDA_VERSION}.jar -o cudf-${CUDF_VERSION}-${CUDA_VERSION}.jar 
 test -f rapids-4-spark_2.12-${R4S_VERSION}.jar || curl https://repo1.maven.org/maven2/com/nvidia/rapids-4-spark_2.12/${R4S_VERSION}/rapids-4-spark_2.12-${R4S_VERSION}.jar -o rapids-4-spark_2.12-${R4S_VERSION}.jar
