@@ -3,3 +3,4 @@ local-*
 .ipynb_checkpoints
 .vscode
 Pipfile.lock
+*.pyc
